@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT */
+
+@font-face {
+  font-family: Prophet;
+  /*src: url('@/assets/font/sans-300.woff') format('woff');*/
+  src: url('@/assets/font/tmp.otf') format('opentype');
+  font-weight: 300;
+}
+/*
+@font-face {
+  font-family: Sans;
+  src: url('@/assets/font/sans-700.woff') format('woff');
+  font-weight: 700;
+}*/
+body {
+  @apply font-body font-normal leading-normal text-white;
+}
+* {
+  scroll-behavior: smooth;
+}
+/*mix-blend-difference*/
+
+.section {
+  @apply text-xs lg:text-base tracking-widest uppercase text-gray whitespace-pre-line;
+}
+h1 {
+  @apply text-2xl lg:text-4xl tracking-[0.01em] whitespace-pre-line;
+}
+.hero{
+  @apply text-3xl lg:text-5xl whitespace-pre-line tracking-normal;
+}
+h2 {
+  @apply  tracking-[0.01em] text-xl lg:text-2xl whitespace-pre-line;
+}
+p, link {
+  @apply text-base leading-[130%] lg:leading-[135%] lg:text-lg tracking-[0.01em]; /* 16px 26px */
+}
+p{
+   @apply whitespace-pre-line;
+}
+.link{
+  @apply underline text-gray;
+}
+.cta{
+  @apply text-sm lg:text-lg uppercase leading-normal tracking-wider text-darkGray hover:text-white;
+}
+.caption{
+  @apply text-xs lg:text-sm tracking-wide text-gray  whitespace-pre-line;
+}
+
+/**/
+
+@layer base {
+  .px-main {
+    @apply px-4  lg:px-5;
+  }
+  .page {
+    @apply max-w-[1440px] px-main overflow-visible;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer flex-center;
+  }
+}

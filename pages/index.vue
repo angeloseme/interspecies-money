@@ -1,0 +1,109 @@
+
+<template>
+  <img v-if="desktopdebug" class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/desktop.png"/>
+  <img v-if="mobiledebug"  class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/mobile.png"/>
+  <div class="h-screen w-full flex-center flex-col bg-red relative">
+    <div class="absolute top-0 left-0 w-full h-full flex-center"><BgImage src="1.png" /></div>
+    <h1 class="hero mix-blend-difference m-auto lg:pb-[1.3em]">{{ $md(data.title) }}</h1>
+    <div class="flex-center h-14 lg:h-16 w-full px-main">
+      <a href="#more" class="cta z-30 lg:mt-2.5 lg:mb-auto">{{data.more}}</a>
+      <a class="cta z-30 ml-auto lg:hidden">{{data.contact}}</a>
+    </div>
+  </div>
+  <div class="w-full flex-center page pt-44 z-10" id="more">
+    <h2 class="max-w-[852px] whitespace-normal lg:whitespace-pre-line">
+      {{ $md(data.intro) }}
+    </h2>
+  </div>
+
+  <div class="w-full flex-center flex-col relative">
+    <div class="absolute pt-96 left-0 w-full h-full flex-center -translate-y-[270px] lg:-translate-y-[150px] pointer-events-none">
+      <BgImage src="2.png" />
+    </div>
+    <div class=" page section max-lg:max-w-[166px] text-center z-10 mt-[140px] lg:mt-[300px]">
+      {{ $md(data.section1.pre) }}
+    </div>
+    <h1 class="page lg:my-[280px] my-[140px] z-10 text-center max-w-[14em] mix-blend-difference max-lg:max-w-[15rem] lg:leading-[120%] lg:tracking-normal" v-html="data.section1.title" ></h1>
+    <p class=" page max-w-[632px] z-10 mix-blend-difference ">{{ $md(data.section1.body) }}</p>
+  </div>
+  <div class="w-full flex-center flex-col relative">
+    <div class="absolute pt-96 left-0 w-full h-full flex-center -translate-y-[270px] lg:-translate-y-[150px]  pointer-events-none"><BgImage src="3.png" /></div>
+    <div class="section max-lg:max-w-[166px] text-center z-10 mt-[162px] lg:mt-[300px] page">
+      {{ $md(data.section2.pre) }}
+    </div>
+    <h1 class="lg:my-[280px] my-[140px] z-10 text-center max-w-[18em] mix-blend-difference page" v-html="data.section2.title"></h1>
+    <p class="max-w-[632px] z-10 mix-blend-difference max-lg:mt-1 page">{{ $md(data.section2.body) }}</p>
+  </div>
+  <div class="mt-64 lg:mt-[300px] pt-[392px] lg:pt-0 flex-center flex-col">
+    <div class="lg:hidden absolute pt-96 left-0 w-full h-full flex-center pointer-events-none  -translate-y-[470px]">
+      <BgImage src="5.png" />
+    </div>
+    <div class="page section z-10">{{ $md(data.section3.pre) }}</div>
+    <p class="page mt-8 lg:mt-12 max-w-[632px] z-10 max-lg:hidden" style="font-size: 22px;letter-spacing: 0px;">{{ $md(data.section3.body) }}</p>
+    <p class="page mt-8 lg:mt-12 max-w-[632px] z-10 lg:hidden" >{{ $md(data.section3.body) }}</p>
+  </div>
+  <div class="mt-20 lg:mt-40 w-full page flex-center flex-col">
+    <div class="section mb-[26px]  lg:mb-12">{{ $md(data.section4.pre) }}</div>
+    <div class="h-px w-full max-w-[1064px] bg-white max-xl:hidden z-10"></div>
+    <Carousel class="max-lg:ml-14 w-full max-xl:border-t border-white max-w-[1180px] z-10 xl:translate-x-[58px]" :breakpoints="breakpoints">
+      <Slide v-for="step,i in data.section4.steps" :key="i">
+        <div class="h-32 text-white font-bold flex w-full">
+          <p class="mt-2">{{ (i + 1) }}</p>
+          <p class="flex-1 mt-[28px] lg:mt-[34px] ml-2.5 lg:ml-2 text-left max-lg:pr-5">{{ $md(step) }}</p>
+        </div>
+      </Slide>
+      <template #addons>
+        <!--<Navigation />-->
+      </template>
+    </Carousel>
+  </div>
+  <div class="w-full page flex-center flex-col">
+    <div class="absolute pt-96 left-0 w-full h-full flex-center pointer-events-none ">
+      <BgImage src="4.png" />
+    </div>
+    <p class="mt-[252px] lg:mt-[359px] max-w-[632px] z-10 lg:hidden" >{{ $md(data.section5.body) }}</p>
+    <p class="mt-[359px] max-w-[632px] z-10 max-lg:hidden" style="font-size: 22px;letter-spacing: 0px;">{{ $md(data.section5.body) }}</p>
+    <div class="cta mt-6 lg:mt-20  z-10">{{ $md(data.contact) }}</div>
+  </div>
+  <div class="w-full page flex-center flex-col pb-10 z-10">
+    <div class="caption mt-[296px] lg:mt-[551px]">{{ data.copyright.replaceAll('<year>', new Date().getFullYear()) }}</div>
+    <div class="caption mt-4 lg:mt-6 text-center">{{ data.credits }}</div>
+  </div>
+</template>
+<script setup>
+const { data } = await useAsyncData('posts', () => {
+  return queryContent('/home').findOne()
+})
+const route = useRoute()
+const desktopdebug = ref(route.fullPath.indexOf('=desktop') >=0)
+const mobiledebug = ref(route.fullPath.indexOf('=mobile') >=0)
+
+const breakpoints = ref({
+
+      0: {
+        itemsToShow: 2.3,
+        snapAlign: 'left'
+      },
+      // 700px and up
+      450: {
+        itemsToShow: 3.5,
+        snapAlign: 'left'
+      },
+      600: {
+        itemsToShow: 3.5,
+        snapAlign: 'left'
+      },
+      // 1024 and up
+      1024: {
+        itemsToShow: 5
+      },
+    })
+/*
+useHead({
+  title: 'Home',
+  script: [
+    { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+  ]
+});
+*/
+</script>
