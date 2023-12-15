@@ -1,8 +1,8 @@
 <template>
     <div class="h-[520px] lg:h-[1024px] w-full" ref="container" :style="'transform:translateY(' + (-translateY) + 'px) scale(' + (1 + (0.0002 * Math.max(0, - translateY))) + ')'">
         <div class="absolute top-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-transparent to-black"></div>
-        <NuxtImg  format="webp"  :src="'/img/bg/mobile/'  + src" class="lg:hidden object-cover w-full h-full" />
-        <NuxtImg format="webp" :src="'/img/bg/desktop/' + src" class="max-lg:hidden object-cover w-full h-full" />
+        <NuxtImg  :src="'/img/bg/mobile/'  + src" class="lg:hidden object-cover w-full h-full" />
+        <NuxtImg :src="'/img/bg/desktop/' + src" class="max-lg:hidden object-cover w-full h-full" />
         <div class="absolute bottom-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-black to-transparent" ></div>
     </div>
 </template>
