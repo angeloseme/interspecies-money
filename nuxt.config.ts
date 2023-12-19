@@ -13,6 +13,12 @@ export default defineNuxtConfig({
   plugins:[
     '~/plugins/plugin.js',
   ],
+  gtag: {
+    id: 'G-KGWLGKHFME',
+    config: {
+      page_title: 'Interspecies Money'
+    }
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
   },
