@@ -53,7 +53,7 @@
     <p class="page mt-8 lg:mt-12 max-w-[672px] z-10">{{ $md(data.section3.body) }}</p>
   </div>
   <div class=" w-full page flex-center flex-col">
-    <div class="section mt-20 lg:mt-40 mb-[26px] lg:mb-12">{{ $md(data.section4.pre) }}</div>
+    <div class="section mt-20 lg:mt-40 mb-[26px] lg:mb-12 z-10">{{ $md(data.section4.pre) }}</div>
     <div class="h-px w-full max-w-[1064px] bg-white max-xl:hidden z-10"></div>
     <Carousel class="max-lg:ml-14 w-full max-xl:border-t border-white max-w-[1180px] z-10 xl:translate-x-[58px]" :breakpoints="breakpoints">
       <Slide v-for="step,i in data.section4.steps" :key="i">
@@ -116,6 +116,7 @@ useHead({
   ]
 });
 */
+
 </script>
 <style>
 .carousel__viewport {

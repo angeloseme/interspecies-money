@@ -22,9 +22,9 @@ onMounted(() => {
         if(route.query.parallax) {
             const y = container.value.getBoundingClientRect().top
             const h = container.value.offsetHeight
-            const alpha = window.innerWidth > 1024?0.4:0.2
+            const alpha = window.innerWidth > 1024?0.4 * 0.3:0.2 * 0.5
             const p = isNaN(route.query.parallax)?1:route.query.parallax
-            const t = - (window.innerHeight * 0.5 - (y + h * 0.5)) * (alpha * p) 
+            const t = (window.innerHeight * 0.5 - (y + h * 0.5)) * (alpha * p) 
             sy.value = t
             ty.value = y
             translateY.value = t
