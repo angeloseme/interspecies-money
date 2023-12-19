@@ -8,11 +8,11 @@ section1:
     pre: Why Do We Need Interspecies Money?
     title: >-
         The biomass of wild animals
-        has collapsed.↗
+        has collapsed.
     body: >-
         The biomass of other species is collapsing; many species disappear without the world ever knowing they existed.
         
-
+        
         The only economic value most nonhumans have is the value of their processed body parts; if money is memory, it holds no memory of the millions of other species with whom humans cohabit the planet.
         
         
@@ -22,9 +22,9 @@ section2:
     title: We aim to  build a new financial marketplace in which other species and humans can exchange financial value.
     body: >-
         We give nonhumans and entire ecosystems the ability to hold and spend Interspecies Money.
-
         
-        We aim to  build a new financial marketplace in which other species and humans can exchange financial value. We believe  a market in “life” will surpass and reshape the “carbon” market. Funds raised at planetary scale and directed accurately, equitably, and sustainably to help discover and protect other species.
+        
+        We aim to  build a new financial marketplace in which other species and humans can exchange financial value. We believe  a market in “life” will surpass and reshape the “carbon” market. Funds raised at planetary scale and directed accurately, equitably, and sustainably to help discover and protect other species.
         
         
         As we move into a world of artificial intelligences, Interspecies Money will seek to incentivise the preservation of biological intelligences. We believe our shared future will not just be AI but “BI” of other species and their knowledge and capabilities.
