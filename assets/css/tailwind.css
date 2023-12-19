@@ -83,6 +83,15 @@ p{
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+  }
+  @keyframes fadeIn {
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity: 1; }
+  }
 }
 
 @layer components {
