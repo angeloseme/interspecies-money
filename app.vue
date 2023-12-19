@@ -6,7 +6,7 @@
 
 <script setup>
 useHead({
-  title: 'NDT Stack',
+  title: 'Interspecies Money',
   meta: [
     { name: 'description', content: 'My amazing site.' }
   ],

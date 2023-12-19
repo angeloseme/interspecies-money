@@ -3,8 +3,8 @@
         <!--<span class="absolute z-50 text-green-400">{{ sy}}</span>-->
         <div class="w-full h-full relative" :style="'transform:translateY(' + translateY + 'px) scale(' + scale + ')'" >
             <div class="absolute top-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-transparent to-black"></div>
-            <NuxtImg  format="webp" sizes="150vw" :src="'/img/bg/mobile/'  + src" class="lg:hidden object-cover w-full h-full" />
-            <NuxtImg format="webp" sizes="150vw" :src="'/img/bg/desktop/' + src" class="max-lg:hidden object-cover w-full h-full" />
+            <NuxtImg  format="webp" sizes="1024px" :src="'/img/bg/mobile/'  + src" class="lg:hidden object-cover w-full h-full" />
+            <NuxtImg format="webp" sizes="1024px md:1520px lg:1920px xl:2440px" :src="'/img/bg/desktop/' + src" class="max-lg:hidden object-cover w-full h-full" />
         </div>
     </div>
 </template>
