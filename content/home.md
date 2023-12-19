@@ -1,9 +1,10 @@
 ---
 title: Interspecies Money
 intro: >-
-    It makes no sense that the market economy puts money into ores, promissory notes, and blocks of computer code, but not into the continuance of rare, complex, 
-    
-    and ancient life forms (regardless of how difficult this is).
+    Interspecies Money seeks to give wild animals, trees, and other species the ability to hold and spend money in a trusted and divisible way in order to improve their life outcomes.
+
+
+    It makes no sense that the market economy puts money into ores, promissory notes, and blocks of computer code, but not into the continuance of rare, complex, and ancient life forms (regardless of how difficult this is).
 section1:
     pre: Why Do We Need Interspecies Money?
     title: >-
