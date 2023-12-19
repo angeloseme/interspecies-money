@@ -1,7 +1,7 @@
 
 <template>
-  <img v-if="desktopdebug" class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/desktop.png"/>
-  <img v-if="mobiledebug"  class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/mobile.png"/>
+  <!--<img v-if="desktopdebug" class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/desktop.png"/>
+  <img v-if="mobiledebug"  class="absolute opacity-50 z-50 pointer-events-none left-0 w-full top-0" src="/img/tmp/mobile.png"/>-->
   <div class="h-screen w-full flex-center flex-col bg-red relative">
     <div class="absolute top-0 left-0 w-full h-full flex-center"><BgImage src="1.png" /></div>
     <h1 class="hero mix-blend-difference m-auto max-lg:pt-[1.5em] relative" v-html="$md(data.title)"></h1>
@@ -81,8 +81,8 @@ const { data } = await useAsyncData('posts', () => {
   return queryContent('/home').findOne()
 })
 const route = useRoute()
-const desktopdebug = ref(route.fullPath.indexOf('=desktop') >=0)
-const mobiledebug = ref(route.fullPath.indexOf('=mobile') >=0)
+// const desktopdebug = ref(route.fullPath.indexOf('=desktop') >=0)
+// const mobiledebug = ref(route.fullPath.indexOf('=mobile') >=0)
 const breakpoints = ref({
 
       0: {
