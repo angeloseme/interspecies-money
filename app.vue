@@ -8,7 +8,7 @@
 useHead({
   title: 'Interspecies Money',
   meta: [
-    { name: 'description', content: 'My amazing site.' }
+    { name: 'description', content: '' }
   ],
   htmlAttrs: {
     lang: 'en'
