@@ -4,13 +4,8 @@
     ref="container"
   >
     <!--<span class="absolute z-50 text-green-400">{{ sy}}</span>-->
-    <div
-      class="w-full h-full relative"
-      :style="'transform:translateY(' + translateY + 'px) scale(' + scale + ')'"
-    >
-      <div
-        class="absolute top-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-transparent to-black"
-      ></div>
+    <div class="w-full h-full relative" :style="'transform:translateY(' + translateY + 'px) scale(' + scale + ')'" >
+      <div class="absolute top-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-transparent to-black" />
       <NuxtImg
         format="webp"
         sizes="1024px"
@@ -25,6 +20,7 @@
         quality="100"
         class="max-lg:hidden object-cover w-full h-full"
       />
+      <div class="absolute bottom-0 left-0 w-full h-16 lg:h-60 z-10 bg-gradient-to-t from-black to-transparent" />
     </div>
   </div>
 </template>
