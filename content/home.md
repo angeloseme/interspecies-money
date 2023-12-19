@@ -30,6 +30,10 @@ section2:
         
         As we move into a world of artificial intelligences, Interspecies Money will seek to incentivise the preservation of biological intelligences. We believe our shared future will not just be AI but “BI” of other species and their knowledge and capabilities.
 section3:
+    pre: beginning
+    body: >-
+        The first pilot of Interspecies Money will seek to prove that nonhumans can receive hold and spend money based on their preferences. It will be delivered in Rwanda in 2024.
+section4:
     pre: challenges
     steps:
         - >-
@@ -52,12 +56,11 @@ section3:
             for Other Species
         - >-
             Species Survival
-section4:
-    pre: beginning
+section5:
     body: >-
-        The first pilot of Interspecies Money will seek to prove that nonhumans can receive hold and spend money based on their preferences. It will be delivered in Rwanda in 2024.
-    contact: Get in touch
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas sagittis turpis, a egestas lectus egestas id.
 copyright: <year> © Interspecies Money Foundation
+contact: Get in touch
 credits: >-
     Design and development
 
