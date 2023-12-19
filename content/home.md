@@ -64,6 +64,6 @@ contact: Get in touch
 credits: >-
     Design and development
 
-    [Studio Folder](https://website-name.com), [Angelo Semeraro](https://angelosemeraro.info/)
+    [Studio Folder](https://www.studiofolder.it/), [Angelo Semeraro](https://angelosemeraro.info)
 more: Read more
 ---
