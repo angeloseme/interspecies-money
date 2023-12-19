@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="w-full flex-center page pt-[66px] lg:pt-44 z-10" id="more">
-    <h2 class="max-w-[852px] whitespace-normal lg:whitespace-pre-line" v-html="$md(data.intro)">
+    <h2 class="max-w-[852px] whitespace-pre-line" v-html="$md(data.intro)">
     </h2>
   </div>
 
